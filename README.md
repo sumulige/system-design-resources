@@ -1,6 +1,6 @@
 # 📝 《系统设计实践》-- awesome-database-learning 记录
 
-进度：[![awesome-database-learning](https://img.shields.io/github/issues/sumulige/system-design-resources?style=flat&label=%F0%9F%8C%B8%20awesome-database-learning%20Record&labelColor=%20%236DB9EF&color=%23FF90BC&link=https%3A%2F%2Fgithub.com%2Fsumulige%2Fsystem-design-resources)](https://github.com/sumulige/huawei-od)
+进度：[![awesome-database-learning](https://img.shields.io/github/issues/sumulige/system-design-resources?style=flat&label=%F0%9F%8C%B8%20awesome-database-learning%20Record&labelColor=%20%236DB9EF&color=%23FF90BC&link=https%3A%2F%2Fgithub.com%2Fsumulige%2Fsystem-design-resources)](https://github.com/sumulige/system-design-resources)
 
 ## 🎄 How to Use
 
