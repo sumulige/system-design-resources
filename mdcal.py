@@ -4,7 +4,6 @@ import calendar
 from datetime import datetime
 import sys
 
-
 def create_calendar(year, month, with_isoweek=False, start_from_Sun=False, lang="en"):
     firstweekday = 6 if start_from_Sun else 0
 
@@ -54,7 +53,6 @@ def get_dict(lang='en'):
             dic[col] = col
     return dic
 
-
 def update_calendar(year, month, day, with_isoweek=False, start_from_Sun=False, lang="en"):
     # Check if README.md exists, if not, create one
     if not os.path.exists('README.md'):
@@ -67,9 +65,8 @@ def update_calendar(year, month, day, with_isoweek=False, start_from_Sun=False, 
         content = file.read()
 
     # Extract the part between "## 🎯 Calendar" to the start of the next section "## Records".
-    calendar_section_match = re.search(
-        "## 🎯 Calendar(.*)(?=## 🍃 Records)", content, re.DOTALL)
-
+    calendar_section_match = re.search("## 🎯 Calendar(.*)(?=## 🍃 Records)", content, re.DOTALL)
+    
     # If "## 🎯 Calendar" section doesn't exist or there is no calendar data
     if calendar_section_match is None:
         return "The 'Calendar' section does not exist in README.md or there is no calendar data."
@@ -85,11 +82,11 @@ def update_calendar(year, month, day, with_isoweek=False, start_from_Sun=False, 
         cal = create_calendar(year, month, with_isoweek, start_from_Sun, lang)
         calendar_section_lines.append('* {}/{}\n'.format(year, month))
         calendar_section_lines += cal.split("\n")
-        calendar_section_lines.append('\n')
+        calendar_section_lines.append('\n') 
     else:
         # Append the existing calendar for the current month/year
         calendar_section_lines += calendar_section.split("\n")[1:]
-
+    
     star_flag = True
     for i in range(1, len(calendar_section_lines)):
         if re.match("^\\|([ ]*.*[ ]*\|)+$", calendar_section_lines[i]):
@@ -104,14 +101,12 @@ def update_calendar(year, month, day, with_isoweek=False, start_from_Sun=False, 
             calendar_section_lines[i] = "|".join(day_cells)
 
     # Replace 'Calendar' section in README.md with the updated section
-    new_content = re.sub(r"## 🎯 Calendar(.*)(?=## 🍃 Records)
-                        ", "\n".join(calendar_section_lines), content, flags=re.DOTALL)
-
+    new_content = re.sub(r"## 🎯 Calendar(.*)(?=## 🍃 Records)", "\n".join(calendar_section_lines), content, flags=re.DOTALL)
+    
     with open('README.md', 'w') as file:
         file.write(new_content)
 
     return "Successfully updated Calendar of README.md"
-
 
 if __name__ == "__main__":
     argv = sys.argv

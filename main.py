@@ -60,19 +60,17 @@ def update_records(issue, issue_number=None):
 
     return "Successfully updated Records of README.md"
 
-
 def update_star(issue):
     created_at_str = issue['created_at']
     date_str = created_at_str.split("T")[0]
     year, month, day = map(int, date_str.split("-"))
     return update_calendar(year, month, day)
 
-
 def get_comments(issue_number=None):
     try:
         if issue_number is None:
             issue_number = os.getenv("ISSUE_NUMBER")
-
+            
         repo_name = os.getenv("GITHUB_REPOSITORY")
         gh_token = os.getenv("GH_TOKEN")
 
@@ -88,12 +86,11 @@ def get_comments(issue_number=None):
 
     return comments
 
-
 def backup_issue_as_md(issue, issue_number):
     try:
         if issue_number is None:
             issue_number = os.getenv("ISSUE_NUMBER")
-
+            
         issue_title = issue["title"]
         issue_body = issue['body']
         issue_labels = ["`" + label['name'] + "`" for label in issue['labels']]
@@ -113,16 +110,15 @@ def backup_issue_as_md(issue, issue_number):
             file.write("* Labels: " + ', '.join(issue_labels) + "\n")
             file.write("* Creation Date: " + issue_date + "\n")
             for i, comment in enumerate(comments, start=1):
-                file.write(f"\n---\n\n")
+                file.write(f"\n---\n\n") 
                 file.write(comment['body'])
                 file.write("\n\n*\n")
 
     except Exception as e:
         print(f"Error in backup_issue_as_md: {e}")
         return "Backup failed"
-
+      
     return "Successfully backup records"
-
 
 def main(issue_number):
     try:
