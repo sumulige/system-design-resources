@@ -1,6 +1,6 @@
 # 📝 《系统设计实践》-- awesome-database-learning 记录
 
-进度：[![awesome-database-learning](https://img.shields.io/github/issues/sumulige/system-design-resources?style=flat&label=%F0%9F%8C%B8%20awesome-database-learning%20Record&labelColor=%20%236DB9EF&color=%23FF90BC&link=https%3A%2F%2Fgithub.com%2Fsumulige%2Fsystem-design-resources)](https://github.com/sumulige/system-design-resources)
+进度：[![awesome-database-learning](https://img.shields.io/github/issues/sumulige/system-design-resources?style=flat&label=%F0%9F%8C%B8%20awesome-database-learning%20Record&labelColor=%20%236DB9EF&color=%23FF90BC&link=https%3A%2F%2Fgithub.com%2Fsumulige%2Fsystem-design-resources)](https://github.com/sumulige/huawei-od)
 
 ## 🎄 How to Use
 
@@ -20,7 +20,7 @@
 |27|28|29|30|1|2|3|
 |4|5|6|7|8|9|10|
 |11|12|13|14|15|16|17|
-|18|19|20|21|22|23|24|
+|18|19|20|21🌟|22|23|24|
 |25|26|27|28|29|30|31|
 
 
