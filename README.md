@@ -27,5 +27,7 @@
 ## 🍃 Records
 
 |#|Title|Tag|Date|
-|:-:|:-:|:-:|:-:||
-5|[转码技术：我们如何大规模提供视频服务](https://github.com/sumulige/system-design-resources/issues/5)|`Transcoding`|2023-12-23T07:48:10Z|
+|::|:-:|:-:|:-:|
+|1|[转码技术：我们如何大规模提供视频服务](https://github.com/sumulige/system-design-resources/issues/1)|`Transcoding`|2023-12-23T07:48:10Z|
+
+
